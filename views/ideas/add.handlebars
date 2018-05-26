@@ -1,0 +1,21 @@
+<!-- loop though our errors array / output 'text: error input ' in our alert div -->
+{{#each errors}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+<!-- if we want something else to happen if we dont have erros -->
+{{/each}}
+
+<div class="card card-body">
+    <h3>Video Idea</h3>
+    <form action="/ideas" method="post">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="details">Details</label>
+            <textarea class="form-control" name="details" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+</div>
